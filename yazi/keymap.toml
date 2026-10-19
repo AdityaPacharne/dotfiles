@@ -1,0 +1,9 @@
+[[mgr.prepend_keymap]]
+on   = ["g", "x"]
+run  = "cd /run/media/guts"
+desc = "Go to external drives"
+
+[[mgr.prepend_keymap]]
+on   = ["g", "y"]
+run  = "shell --block -- udiskie-umount \"$(ls /run/media/$USER/ | head -1 | xargs -I{} echo /run/media/$USER/{})\""
+desc = "Unmount first external drive"

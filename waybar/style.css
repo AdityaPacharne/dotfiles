@@ -1,0 +1,114 @@
+* {
+    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', monospace;
+    font-size: 11px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+/* Pill style for all modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#scratchpad,
+#power-profiles-daemon,
+#custom-battery_power,
+#custom-cpu {
+    padding: 1px 8px;
+    margin: 2px 2px;
+    /* padding: 2px 10px; */
+    /* margin: 3px 2px; */
+    border-radius: 10px;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+#workspaces {
+    margin: 3px 4px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: rgba(235, 77, 75, 0.8);
+    color: #ffffff;
+}
+
+#battery.charging,
+#battery.plugged {
+    background-color: rgba(38, 166, 91, 0.4);
+}
+
+#battery.critical:not(.charging) {
+    background-color: rgba(245, 60, 60, 0.6);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+#power-profiles-daemon.performance {
+    background-color: rgba(245, 60, 60, 0.4);
+}
+
+#power-profiles-daemon.balanced {
+    background-color: rgba(41, 128, 185, 0.4);
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: rgba(46, 204, 113, 0.4);
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgba(235, 77, 75, 0.6);
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+#mode {
+    background-color: rgba(100, 114, 125, 0.6);
+}
