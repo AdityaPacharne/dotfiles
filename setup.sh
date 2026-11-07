@@ -8,7 +8,7 @@ echo "==> Setup starting..."
 
 # ─── Configs ──────────────────────────────────────────────────────────────────
 mkdir -p ~/.config
-for dir in foot waybar sway swaylock rofi yazi; do
+for dir in foot waybar sway rofi yazi; do
   [ -d "$DOTFILES_DIR/$dir" ] && cp -r "$DOTFILES_DIR/$dir"/. ~/.config/"$dir"/ && echo "    Copied $dir"
 done
 
@@ -54,7 +54,9 @@ fi
 
 # ─── Yazi .desktop ────────────────────────────────────────────────────────────
 YAZI_DESKTOP="$HOME/.local/share/applications/yazi.desktop"
-[ -f "$YAZI_DESKTOP" ] || mkdir -p ~/.local/share/applications && cat > "$YAZI_DESKTOP" << 'EOF'
+if [ ! -f "$YAZI_DESKTOP" ]; then
+  mkdir -p ~/.local/share/applications
+  cat > "$YAZI_DESKTOP" << 'EOF'
 [Desktop Entry]
 Name=Yazi
 Exec=footclient -e yazi
@@ -62,6 +64,7 @@ Terminal=false
 Type=Application
 Categories=System;FileManager;
 EOF
+fi
 
 # ─── Fonts ────────────────────────────────────────────────────────────────────
 if ! fc-list | grep -qi "JetBrainsMono"; then
