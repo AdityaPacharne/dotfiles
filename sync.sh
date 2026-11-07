@@ -4,7 +4,7 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "==> Syncing configs to dotfiles..."
 
-for dir in foot waybar sway rofi yazi; do
+for dir in foot sway rofi yazi; do
   if [ -d ~/.config/"$dir" ]; then
     mkdir -p "$DOTFILES_DIR/$dir"
     cp -r ~/.config/"$dir"/. "$DOTFILES_DIR/$dir"/

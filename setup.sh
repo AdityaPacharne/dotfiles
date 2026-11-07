@@ -8,7 +8,7 @@ echo "==> Setup starting..."
 
 # ─── Configs ──────────────────────────────────────────────────────────────────
 mkdir -p ~/.config
-for dir in foot waybar sway rofi yazi; do
+for dir in foot sway rofi yazi; do
   [ -d "$DOTFILES_DIR/$dir" ] && cp -r "$DOTFILES_DIR/$dir"/. ~/.config/"$dir"/ && echo "    Copied $dir"
 done
 
@@ -19,7 +19,7 @@ cmd librewolf || sudo dnf config-manager addrepo --from-repofile=https://repo.li
 
 # ─── DNF packages ─────────────────────────────────────────────────────────────
 sudo dnf install -y \
-  foot udiskie ffmpeg mpv keepassxc blueman brightnessctl powertop \
+  foot udiskie ffmpeg mpv keepassxc brightnessctl powertop \
   git rofi syncthing neovim tuned papirus-icon-theme greetd librewolf
 
 # ─── Tuned ────────────────────────────────────────────────────────────────────
