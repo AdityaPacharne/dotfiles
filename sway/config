@@ -33,7 +33,6 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
 # output * bg /usr/share/backgrounds/default.jxl fill
 # output * bg /home/guts/Downloads/background.jpg fill
-output * bg /home/guts/Downloads/background.jpg fill
 
 #
 # Example configuration:
@@ -218,6 +217,7 @@ exec foot --server
 exec udiskie --no-tray --no-notify
 
 bindsym $mod+u exec librewolf
+bindsym $mod+i exec librewolf --private-window
 
 # Gruvbox colors
 # class                 border      background  text        indicator   child_border
