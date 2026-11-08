@@ -236,6 +236,9 @@ client.unfocused        #32302f     #32302f     #a89984     #32302f     #32302f
 client.focused_inactive #3c3836     #3c3836     #a89984     #3c3836     #3c3836
 client.urgent           #cc241d     #cc241d     #ebdbb2     #cc241d     #cc241d
 
+# Stop cursor from changing focus
+focus_follows_mouse no
+
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
 #  - /etc/sway/config.d

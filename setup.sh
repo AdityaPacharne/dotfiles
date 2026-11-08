@@ -20,7 +20,7 @@ cmd librewolf || sudo dnf config-manager addrepo --from-repofile=https://repo.li
 # ─── DNF packages ─────────────────────────────────────────────────────────────
 sudo dnf install -y \
   foot udiskie ffmpeg mpv keepassxc brightnessctl powertop \
-  git rofi syncthing neovim tuned papirus-icon-theme greetd librewolf
+  git rofi syncthing neovim tuned papirus-icon-theme greetd librewolf flex bison openssl-devel
 
 # ─── Tuned ────────────────────────────────────────────────────────────────────
 systemctl is-enabled tuned &>/dev/null || {
