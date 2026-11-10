@@ -19,7 +19,7 @@ cmd librewolf || sudo dnf config-manager addrepo --from-repofile=https://repo.li
 
 # ─── DNF packages ─────────────────────────────────────────────────────────────
 sudo dnf install -y \
-  foot udiskie ffmpeg mpv keepassxc brightnessctl powertop \
+  foot udiskie ffmpeg mpv keepassxc brightnessctl powertop gimp \
   git rofi syncthing neovim tuned papirus-icon-theme greetd librewolf flex bison openssl-devel
 
 # ─── Tuned ────────────────────────────────────────────────────────────────────
