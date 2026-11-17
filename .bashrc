@@ -85,3 +85,5 @@ earphones() {
     bluetoothctl agent on
     bluetoothctl connect 74:D7:13:CD:21:E6
 }
+
+alias ktest='/home/guts/ktest'
